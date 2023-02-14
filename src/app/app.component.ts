@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment-2';
+  name = "rushi";
+
+  clicked(){
+    alert("hello" + this.name);
+  }
+
+  textInput(event:Event){
+    let ctrl = <HTMLInputElement>event.target;
+     this.name = ctrl.value;
+  }
 }
